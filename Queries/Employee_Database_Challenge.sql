@@ -1,10 +1,11 @@
 --Follow the instructions below to complete Deliverable 1.
-SELECT e.emp_no,
-		e.first_name,
-		e.last_name,
-		t.title,
-		t.from_date,
-		t.to_date
+SELECT 
+	e.emp_no,
+	e.first_name,
+	e.last_name,
+	t.title,
+	t.from_date,
+	t.to_date
 --INTO retirement_titles
 FROM employees AS e
 	INNER JOIN titles AS t
@@ -14,23 +15,26 @@ AND t.to_date = '9999-01-01'
 ORDER BY emp_no ASC;
 
 -- Use Dictinct with Orderby to remove duplicate rows
-SELECT DISTINCT ON (rt.emp_no) rt.emp_no,
-rt.first_name,
-rt.last_name,
-rt.title
+SELECT DISTINCT ON (rt.emp_no) 
+	rt.emp_no,
+	rt.first_name,
+	rt.last_name,
+	rt.title
 --INTO unique_titles
 FROM retirement_titles AS rt
 ORDER BY emp_no, to_date DESC;
 
 --retrieve the number of employees by their most recent job title who are about to retire.
-SELECT COUNT(ut.emp_no), ut.title
+SELECT COUNT(ut.emp_no), 
+	ut.title
 --INTO retiring_titles
 FROM unique_titles as ut
 GROUP BY title
 ORDER BY COUNT(title) DESC;
 
 --write a query to create a Mentorship Eligibility
-SELECT DISTINCT ON(e.emp_no) e.emp_no, 
+SELECT DISTINCT ON(e.emp_no) 
+	e.emp_no, 
     e.first_name, 
     e.last_name, 
     e.birth_date,
