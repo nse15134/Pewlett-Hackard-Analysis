@@ -32,7 +32,7 @@ FROM unique_titles as ut
 GROUP BY title
 ORDER BY COUNT(title) DESC;
 
---write a query to create a Mentorship Eligibility
+-- Mentorship Eligibility
 SELECT DISTINCT ON(e.emp_no) 
 	e.emp_no, 
     e.first_name, 
@@ -52,3 +52,5 @@ AND de.to_date = '9999-01-01'
 AND t.to_date= '9999-01-01'
 --^this ensures that it is taking the current job title as opposed to previous titles
 ORDER BY e.emp_no;
+
+
