@@ -12,4 +12,6 @@ The first metric that we notice is the high number of Senior Engineers and Senio
 
 ## Summary
   --How many roles will need to be filled as the "silver tsunami" begins to make an impact?
-  
+  The company will need to fill 72,458 roles once the silvee tsunami begins.
+ 
+![Total retiring](https://user-images.githubusercontent.com/98061420/158117289-751a3152-8fa8-4acf-aaeb-141bc591b7d2.PNG)
