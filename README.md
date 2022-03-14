@@ -7,6 +7,9 @@ The first metric that we notice is the high number of Senior Engineers and Senio
 ![mentorship_breakout](https://user-images.githubusercontent.com/98061420/158115036-e4dcd1b5-78c8-4ecf-be4b-fdda24580bae.PNG)
 
 
+
+![Retiring Titles](https://user-images.githubusercontent.com/98061420/158117017-a986b6f1-dc40-4f7e-a3d5-5fca7d19b37a.PNG)
+
 ## Summary
   --How many roles will need to be filled as the "silver tsunami" begins to make an impact?
   
