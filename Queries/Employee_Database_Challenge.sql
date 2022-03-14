@@ -5,7 +5,7 @@ SELECT e.emp_no,
 		t.title,
 		t.from_date,
 		t.to_date
-INTO retirement_titles
+--INTO retirement_titles
 FROM employees AS e
 	INNER JOIN titles AS t
 		ON (e.emp_no = t.emp_no)
@@ -18,14 +18,33 @@ SELECT DISTINCT ON (rt.emp_no) rt.emp_no,
 rt.first_name,
 rt.last_name,
 rt.title
-INTO unique_titles
+--INTO unique_titles
 FROM retirement_titles AS rt
 ORDER BY emp_no, to_date DESC;
 
 --retrieve the number of employees by their most recent job title who are about to retire.
 SELECT COUNT(ut.emp_no), ut.title
-INTO retiring_titles
+--INTO retiring_titles
 FROM unique_titles as ut
 GROUP BY title
 ORDER BY COUNT(title) DESC;
 
+--write a query to create a Mentorship Eligibility
+SELECT DISTINCT ON(e.emp_no) e.emp_no, 
+    e.first_name, 
+    e.last_name, 
+    e.birth_date,
+    de.from_date,
+    de.to_date,
+    t.title
+--INTO mentorship_eligibilty
+FROM employees as e
+Left Join dept_emp as de
+ON (e.emp_no = de.emp_no)
+Left Join titles as t
+ON (e.emp_no = t.emp_no)
+WHERE (e.birth_date BETWEEN '1965-01-01' AND '1965-12-31')
+AND de.to_date = '9999-01-01'
+AND t.to_date= '9999-01-01'
+--^this ensures that it is taking the current job title as opposed to previous titles
+ORDER BY e.emp_no;
