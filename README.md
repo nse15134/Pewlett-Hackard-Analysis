@@ -16,3 +16,9 @@ The first metric that we notice is the high number of Senior Engineers and Senio
   The company will need to fill 72,458 roles once the silvee tsunami begins.
  
 ![Total retiring](https://user-images.githubusercontent.com/98061420/158117289-751a3152-8fa8-4acf-aaeb-141bc591b7d2.PNG)
+
+--Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
+
+There are only 1.549 employees eligible for the mentorship program.  This does not seem like enough to mentor the next generation of employees.
+
+![mentor titles](https://user-images.githubusercontent.com/98061420/158117874-69c8e967-3067-4e06-95f1-bf0eb29042b3.PNG)
